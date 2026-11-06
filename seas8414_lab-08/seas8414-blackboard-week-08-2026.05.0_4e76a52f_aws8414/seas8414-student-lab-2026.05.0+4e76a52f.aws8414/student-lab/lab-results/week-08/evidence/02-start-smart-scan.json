@@ -1,0 +1,1 @@
+{"scan_id":"0707fb01-8f28-4d59-99c1-1a5cfd78e99a","subnet":"172.30.0.0/24","scan_name":"Onyx Keystone","status":"running","queue_position":null,"total_batches":1,"estimated_hosts":254,"stream_url":"/v1/scanning/stream/0707fb01-8f28-4d59-99c1-1a5cfd78e99a","results_url":"/v1/scanning/smart-scan/0707fb01-8f28-4d59-99c1-1a5cfd78e99a/results"}

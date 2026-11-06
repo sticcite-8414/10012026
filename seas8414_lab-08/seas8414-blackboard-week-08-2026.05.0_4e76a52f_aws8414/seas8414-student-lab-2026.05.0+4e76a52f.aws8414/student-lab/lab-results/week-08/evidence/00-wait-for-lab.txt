@@ -1,0 +1,4 @@
+[*] Waiting for lab services to become ready ...
+    api: health=starting; api=waiting
+[+] 25 services running with passing health checks
+[+] API health check passed at http://127.0.0.1:8100/health
