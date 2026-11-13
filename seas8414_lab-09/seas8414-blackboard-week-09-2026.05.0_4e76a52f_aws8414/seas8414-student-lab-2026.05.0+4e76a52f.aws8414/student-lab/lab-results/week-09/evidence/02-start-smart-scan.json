@@ -1,0 +1,1 @@
+{"scan_id":"dac128ec-fb52-4b46-acfd-31fd608db95e","subnet":"172.30.0.0/24","scan_name":"Deep Bastion","status":"running","queue_position":null,"total_batches":1,"estimated_hosts":254,"stream_url":"/v1/scanning/stream/dac128ec-fb52-4b46-acfd-31fd608db95e","results_url":"/v1/scanning/smart-scan/dac128ec-fb52-4b46-acfd-31fd608db95e/results"}

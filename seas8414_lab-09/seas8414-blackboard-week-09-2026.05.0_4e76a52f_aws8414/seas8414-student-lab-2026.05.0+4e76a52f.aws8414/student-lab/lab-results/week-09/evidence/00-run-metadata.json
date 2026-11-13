@@ -1,0 +1,12 @@
+{
+  "week": "09",
+  "phase": 9,
+  "title": "Supply Chain Integrity and Counterfeit Detection",
+  "api_base": "http://localhost:8100",
+  "subnet": "172.30.0.0/24",
+  "outer_zip": "seas8414-blackboard-week-09-2026.05.0_4e76a52f_aws8414.zip",
+  "runtime_dir": "seas8414-student-lab-2026.05.0+4e76a52f.aws8414",
+  "generated_at": "2026-11-13T00:43:01Z",
+  "host_platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.39",
+  "working_directory": "/workspaces/10012026/seas8414_lab-09/seas8414-blackboard-week-09-2026.05.0_4e76a52f_aws8414/seas8414-student-lab-2026.05.0+4e76a52f.aws8414/student-lab"
+}

@@ -1,0 +1,6 @@
+{
+  "workflow_exit_code": 0,
+  "cleanup_exit_code": 0,
+  "cleanup_passed": true,
+  "containers_decommissioned": true
+}
