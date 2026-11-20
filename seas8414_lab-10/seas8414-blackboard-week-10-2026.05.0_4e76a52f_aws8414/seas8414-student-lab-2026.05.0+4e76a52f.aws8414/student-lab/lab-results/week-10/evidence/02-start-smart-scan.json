@@ -1,0 +1,1 @@
+{"scan_id":"d6246169-e697-41ef-b507-7f5565983524","subnet":"172.30.0.0/24","scan_name":"Prism Recon","status":"running","queue_position":null,"total_batches":1,"estimated_hosts":254,"stream_url":"/v1/scanning/stream/d6246169-e697-41ef-b507-7f5565983524","results_url":"/v1/scanning/smart-scan/d6246169-e697-41ef-b507-7f5565983524/results"}

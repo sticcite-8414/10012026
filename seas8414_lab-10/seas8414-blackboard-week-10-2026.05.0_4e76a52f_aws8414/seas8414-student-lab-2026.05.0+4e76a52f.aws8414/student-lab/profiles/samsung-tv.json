@@ -1,0 +1,17 @@
+{
+  "name": "samsung-tv",
+  "protocols": [
+    {
+      "type": "raw_tcp",
+      "ports": [8001, 8002]
+    },
+    {
+      "type": "ssdp",
+      "manufacturer": "Samsung Electronics",
+      "model_name": "Samsung Smart TV",
+      "friendly_name": "Samsung TV",
+      "device_type_urn": "urn:samsung.com:device:RemoteControlReceiver:1",
+      "http_port": 8001
+    }
+  ]
+}

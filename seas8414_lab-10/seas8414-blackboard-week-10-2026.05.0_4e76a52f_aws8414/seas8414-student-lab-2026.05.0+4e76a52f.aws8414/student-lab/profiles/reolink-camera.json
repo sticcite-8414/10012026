@@ -1,0 +1,24 @@
+{
+  "name": "reolink-camera",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "Reolink",
+      "server_header": "Reolink",
+      "realm": "Reolink",
+      "credentials": [
+        {"username": "admin", "password": ""}
+      ]
+    },
+    {
+      "type": "rtsp",
+      "port": 554,
+      "server_header": "Reolink RTSP Server",
+      "realm": "Reolink",
+      "credentials": [
+        {"username": "admin", "password": ""}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "hue-bridge",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "Philips hue",
+      "server_header": "nginx"
+    },
+    {
+      "type": "tls",
+      "port": 443,
+      "issuer_org": "Philips Hue",
+      "subject_cn": "Philips Hue Bridge",
+      "title": "Philips hue"
+    },
+    {
+      "type": "http",
+      "port": 8080,
+      "title": "Philips hue",
+      "server_header": "nginx"
+    },
+    {
+      "type": "ssdp",
+      "manufacturer": "Signify",
+      "model_name": "Philips hue bridge 2.0",
+      "friendly_name": "Philips hue",
+      "http_port": 80
+    },
+    {
+      "type": "mdns",
+      "services": [
+        {
+          "type": "_hue._tcp.local.",
+          "name": "Philips-hue._hue._tcp.local.",
+          "port": 443,
+          "txt": {"modelid": "BSB002"}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "chromecast",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 8008,
+      "title": "Eureka Info",
+      "server_header": ""
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [8009]
+    },
+    {
+      "type": "tls",
+      "port": 8443,
+      "issuer_org": "Google Cast",
+      "subject_cn": "chromecast.local"
+    },
+    {
+      "type": "mdns",
+      "services": [
+        {
+          "type": "_googlecast._tcp.local.",
+          "name": "Chromecast-abc123._googlecast._tcp.local.",
+          "port": 8008,
+          "txt": {"fn": "Living Room TV", "md": "Chromecast"}
+        }
+      ]
+    }
+  ]
+}

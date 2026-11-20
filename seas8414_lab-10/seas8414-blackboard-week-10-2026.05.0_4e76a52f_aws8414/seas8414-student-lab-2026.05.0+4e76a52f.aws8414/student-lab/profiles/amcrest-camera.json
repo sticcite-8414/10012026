@@ -1,0 +1,28 @@
+{
+  "name": "amcrest-camera",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "Amcrest IP Camera",
+      "server_header": "Amcrest",
+      "realm": "Amcrest",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ]
+    },
+    {
+      "type": "rtsp",
+      "port": 554,
+      "server_header": "Amcrest RTSP Server",
+      "realm": "Amcrest",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ]
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [37777]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ring-doorbell",
+  "protocols": [
+    {
+      "type": "raw_tcp",
+      "ports": [9998]
+    }
+  ]
+}

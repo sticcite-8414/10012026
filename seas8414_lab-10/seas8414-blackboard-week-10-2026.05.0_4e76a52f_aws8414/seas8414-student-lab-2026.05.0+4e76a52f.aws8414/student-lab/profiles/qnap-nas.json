@@ -1,0 +1,42 @@
+{
+  "name": "qnap-nas",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 8080,
+      "title": "QNAP Turbo NAS",
+      "server_header": "http server 1.0",
+      "realm": "QNAP NAS",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ],
+      "vuln_endpoints": [
+        {
+          "path": "/cgi-bin/",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>QNAP Turbo NAS</title></head><body><h1>QNAP NAS</h1></body></html>"
+        },
+        {
+          "path": "/cgi-bin/html/login.html",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>QNAP Turbo NAS</title></head><body><form id='login_form' action='/cgi-bin/authLogin.cgi'><input name='user'/><input name='pwd'/></form></body></html>"
+        }
+      ]
+    },
+    {
+      "type": "tls",
+      "port": 443,
+      "issuer_org": "QNAP Systems Inc.",
+      "subject_cn": "qnap.local",
+      "title": "QNAP Turbo NAS"
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [445]
+    }
+  ]
+}

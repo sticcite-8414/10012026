@@ -1,0 +1,26 @@
+{
+  "name": "apple-tv",
+  "protocols": [
+    {
+      "type": "raw_tcp",
+      "ports": [7000, 3689]
+    },
+    {
+      "type": "mdns",
+      "services": [
+        {
+          "type": "_airplay._tcp.local.",
+          "name": "Apple-TV._airplay._tcp.local.",
+          "port": 7000,
+          "txt": {"model": "AppleTV6,2"}
+        },
+        {
+          "type": "_raop._tcp.local.",
+          "name": "AABBCCDDEE@Apple-TV._raop._tcp.local.",
+          "port": 7000,
+          "txt": {}
+        }
+      ]
+    }
+  ]
+}

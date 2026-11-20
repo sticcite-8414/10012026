@@ -1,0 +1,35 @@
+{
+  "name": "sonos-speaker",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 1400,
+      "title": "Sonos",
+      "server_header": "Linux UPnP/1.0 Sonos/72.0-40100"
+    },
+    {
+      "type": "tls",
+      "port": 1443,
+      "issuer_org": "Sonos Inc.",
+      "subject_cn": "sonos.local"
+    },
+    {
+      "type": "ssdp",
+      "manufacturer": "Sonos, Inc.",
+      "model_name": "Sonos One",
+      "friendly_name": "Living Room - Sonos One",
+      "http_port": 1400
+    },
+    {
+      "type": "mdns",
+      "services": [
+        {
+          "type": "_sonos._tcp.local.",
+          "name": "Sonos-Speaker._sonos._tcp.local.",
+          "port": 1443,
+          "txt": {"info": "Sonos One"}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "hp-printer",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "HP LaserJet Pro MFP",
+      "server_header": "HP HTTP Server",
+      "credentials": [
+        {"username": "admin", "password": ""}
+      ],
+      "vuln_endpoints": [
+        {
+          "path": "/hp/device/SignIn/Index",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>HP LaserJet Pro MFP - Sign In</title></head><body><form method='POST'><input name='PinDropDown' value='AdminItem'/><input name='PasswordTextBox' value=''/><div>User: Administrator</div><a>Sign out</a></form></body></html>"
+        },
+        {
+          "path": "/hp/device/webAccess/index.htm",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>HP Officejet Pro 8620</title></head><body><h1>HP Officejet Pro 8620</h1><p>Security Settings</p></body></html>"
+        },
+        {
+          "path": "/hp/device/this.LCDispatcher",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>Configuration Page</title></head><body><h1>Device Configuration</h1><p>set_config_deviceinfo</p></body></html>"
+        },
+        {
+          "path": "/SSI/index.htm",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>HP LaserJet Professional</title></head><body><h1>HP LaserJet Professional M1536dnf MFP</h1></body></html>"
+        }
+      ]
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [631, 9100]
+    },
+    {
+      "type": "mdns",
+      "services": [
+        {
+          "type": "_ipp._tcp.local.",
+          "name": "HP-LaserJet-Pro._ipp._tcp.local.",
+          "port": 631,
+          "txt": {"txtvers": "1", "pdl": "application/postscript"}
+        },
+        {
+          "type": "_printer._tcp.local.",
+          "name": "HP-LaserJet-Pro._printer._tcp.local.",
+          "port": 9100,
+          "txt": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "nest-thermostat",
+  "protocols": [
+    {
+      "type": "raw_tcp",
+      "ports": [10002, 10010]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "esp32-module",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "ESP32 Web Server",
+      "server_header": "ESP32",
+      "realm": "ESP32",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ]
+    }
+  ]
+}

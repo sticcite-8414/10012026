@@ -1,0 +1,1 @@
+{"status":"success","data":{"deployment_count":1,"session_count":0,"unique_attackers":0,"total_honeypots":10,"protocols_engaged":[],"credential_attempts":0,"dwell_time":{"average":0.0,"median":0.0,"max":0.0,"min":0.0},"detection_latency":{"average":0.0,"median":0.0,"max":0.0},"skill_distribution":{},"mitre_heatmap":{},"coverage_pct":0.0}}

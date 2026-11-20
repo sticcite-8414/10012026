@@ -1,0 +1,45 @@
+{
+  "name": "dahua-nvr",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "WEB SERVICE",
+      "server_header": "Dahua",
+      "realm": "DahuaLogin",
+      "credentials": [
+        {"username": "admin", "password": "admin"},
+        {"username": "admin", "password": ""}
+      ],
+      "vuln_endpoints": [
+        {
+          "path": "/current_config/passwd",
+          "auth_required": false,
+          "content_type": "text/plain",
+          "status": 200,
+          "response": "ugm\nid:name:passwd:grp:sha:remark\n1:admin:tluafed:0:ySh4Pp:System Default User\n1:admin:tluafed:1:CtrPanel:NVR Admin"
+        },
+        {
+          "path": "/RPC2_Login",
+          "auth_required": false,
+          "content_type": "application/json",
+          "status": 200,
+          "response": "{\"id\":1,\"params\":{\"keepAliveInterval\":60},\"result\":true,\"session\":\"a1b2c3d4\"}"
+        }
+      ]
+    },
+    {
+      "type": "rtsp",
+      "port": 554,
+      "server_header": "Dahua rtsp server",
+      "realm": "Dahua",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ]
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [37777]
+    }
+  ]
+}

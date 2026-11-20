@@ -1,0 +1,22 @@
+{
+  "name": "ubiquiti-ap",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "UniFi Network",
+      "server_header": "lighttpd",
+      "realm": "UniFi",
+      "credentials": [
+        {"username": "ubnt", "password": "ubnt"}
+      ]
+    },
+    {
+      "type": "tls",
+      "port": 443,
+      "issuer_org": "Ubiquiti Inc.",
+      "subject_cn": "UniFi AP",
+      "title": "UniFi Network"
+    }
+  ]
+}

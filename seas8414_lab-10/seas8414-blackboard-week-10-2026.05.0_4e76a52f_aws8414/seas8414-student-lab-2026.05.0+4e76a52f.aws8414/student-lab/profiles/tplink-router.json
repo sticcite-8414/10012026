@@ -1,0 +1,38 @@
+{
+  "name": "tplink-router",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "TP-Link Wi-Fi Router",
+      "server_header": "TP-LINK Router",
+      "realm": "TP-LINK Wireless N Router WR940N",
+      "credentials": [
+        {"username": "admin", "password": "admin"}
+      ],
+      "vuln_endpoints": [
+        {
+          "path": "/userRpm/MenuRpm.htm",
+          "auth_required": true,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>R470T</title></head><body><script>var SystemStatisticRpm='SystemStatisticRpm.htm'; var DiagnosticRpm='DiagnosticRpm.htm';</script></body></html>"
+        },
+        {
+          "path": "/userRpm/LoginRpm.htm",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>TP-LINK Router</title><script>window.location.href='/userRpm/Index.htm';</script></head><body></body></html>"
+        }
+      ]
+    },
+    {
+      "type": "tls",
+      "port": 443,
+      "issuer_org": "TP-Link Technologies",
+      "subject_cn": "tplinkwifi.net",
+      "title": "TP-Link Wi-Fi Router"
+    }
+  ]
+}

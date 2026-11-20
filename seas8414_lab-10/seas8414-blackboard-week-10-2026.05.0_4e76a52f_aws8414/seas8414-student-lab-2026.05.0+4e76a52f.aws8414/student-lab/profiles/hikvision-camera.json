@@ -1,0 +1,66 @@
+{
+  "name": "hikvision-camera",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 80,
+      "title": "Hikvision Digital Technology Co., Ltd.",
+      "server_header": "DNVRS-Webs",
+      "realm": "Hikvision Digital Technology",
+      "credentials": [
+        {"username": "admin", "password": "12345"},
+        {"username": "admin", "password": "Hikvision"}
+      ],
+      "vuln_endpoints": [
+        {
+          "path": "/system/deviceInfo",
+          "auth_required": false,
+          "content_type": "application/xml",
+          "status": 200,
+          "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<DeviceInfo version=\"2.0\" xmlns=\"http://www.hikvision.com/ver20/XMLSchema\">\n<deviceName>IP Camera</deviceName>\n<deviceID>DS-2CD2143G2-I20200915AAWRC00000000</deviceID>\n<model>DS-2CD2143G2-I</model>\n<serialNumber>DS-2CD2143G2-I20200915AAWRC00000000</serialNumber>\n<macAddress>C0:56:E3:00:00:01</macAddress>\n<firmwareVersion>V5.5.52 build 200915</firmwareVersion>\n<firmwareReleasedDate>2020-09-15</firmwareReleasedDate>\n<deviceType>IPCamera</deviceType>\n</DeviceInfo>"
+        },
+        {
+          "path": "/Security/users",
+          "auth_required": false,
+          "content_type": "application/xml",
+          "status": 200,
+          "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserList version=\"2.0\" xmlns=\"http://www.hikvision.com/ver20/XMLSchema\">\n<User version=\"2.0\">\n<id>1</id>\n<userName>admin</userName>\n<userLevel>Administrator</userLevel>\n</User>\n</UserList>"
+        },
+        {
+          "path": "/config/user.xml",
+          "auth_required": false,
+          "content_type": "text/xml",
+          "status": 200,
+          "response": "<?xml version=\"1.0\"?>\n<config>\n<user name=\"admin\" password=\"YWRtaW46MTIzNDU=\" level=\"admin\"/>\n</config>"
+        },
+        {
+          "path": "/doc/page/login.asp",
+          "auth_required": false,
+          "content_type": "text/html",
+          "status": 200,
+          "response": "<html><head><title>Hikvision Digital Technology</title></head><body><div id='loginArea'><form>Login</form></div></body></html>"
+        }
+      ]
+    },
+    {
+      "type": "rtsp",
+      "port": 554,
+      "server_header": "Hikvision Streaming Server 1.0",
+      "realm": "Hikvision",
+      "credentials": [
+        {"username": "admin", "password": "12345"}
+      ]
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [8000]
+    },
+    {
+      "type": "ssdp",
+      "manufacturer": "Hikvision Digital Technology",
+      "model_name": "DS-2CD2143G2-I",
+      "friendly_name": "Hikvision IP Camera",
+      "http_port": 80
+    }
+  ]
+}

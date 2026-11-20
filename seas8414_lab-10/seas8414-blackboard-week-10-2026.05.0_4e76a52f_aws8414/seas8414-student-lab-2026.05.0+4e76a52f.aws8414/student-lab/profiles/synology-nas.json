@@ -1,0 +1,26 @@
+{
+  "name": "synology-nas",
+  "protocols": [
+    {
+      "type": "http",
+      "port": 5000,
+      "title": "Synology DiskStation",
+      "server_header": "nginx",
+      "realm": "Synology DSM",
+      "credentials": [
+        {"username": "admin", "password": ""}
+      ]
+    },
+    {
+      "type": "tls",
+      "port": 5001,
+      "issuer_org": "Synology Inc.",
+      "subject_cn": "synology.local",
+      "title": "Synology DiskStation"
+    },
+    {
+      "type": "raw_tcp",
+      "ports": [445]
+    }
+  ]
+}
